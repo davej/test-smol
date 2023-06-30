@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-black text-white;
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+
+.navbar {
+  @apply bg-gray-800 text-white;
+}
+
+.footer {
+  @apply bg-gray-900 text-gray-300;
+}
+
+.blog-post {
+  @apply bg-gray-700 text-gray-300;
+}
+
+.portfolio-item {
+  @apply bg-gray-600 text-gray-200;
+}

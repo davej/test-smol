@@ -1,28 +1,22 @@
 ```svelte
 <script>
   import { onMount } from 'svelte';
-  import Card from '$lib/components/Card.svelte';
-  import { getBlogPosts } from '$lib/utils.js';
+  import { firestore } from '$lib/utils/firestore.js';
+  import BlogPost from '$lib/components/BlogPost.svelte';
 
-  let posts = [];
+  let blogPosts = [];
 
   onMount(async () => {
-    posts = await getBlogPosts();
+    blogPosts = await firestore.getBlogPosts();
   });
 </script>
 
-<main class="dark:bg-gray-800 dark:text-white">
-  <h1 class="text-3xl font-bold mb-4">Blog</h1>
+<main class="dark:bg-gray-800">
+  <h1 class="text-4xl font-bold text-white mb-4">Blog</h1>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {#each posts as post (post.id)}
-      <Card {post} />
+    {#each blogPosts as post (post.id)}
+      <BlogPost {post} />
     {/each}
   </div>
 </main>
-
-<style>
-  main {
-    padding: 1rem;
-  }
-</style>
 ```

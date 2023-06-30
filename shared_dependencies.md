@@ -1,17 +1,28 @@
-1. **SvelteKit**: All the `.svelte` files share the SvelteKit framework. They will use the same Svelte syntax and lifecycle methods.
+1. Dependencies:
+   - SvelteKit: Used in all `.svelte` files for creating components and pages.
+   - Tailwind CSS: Used in all `.css` files for styling.
+   - Firestore: Used in `firestore.js` for retrieving data, and indirectly used in all routes that display data.
 
-2. **Tailwind CSS**: All the `.css` files and `.svelte` files will share Tailwind CSS for styling. They will use the same class names defined in Tailwind CSS.
+2. Exported Variables:
+   - `firestore` from `firestore.js`: Used in all routes that need to retrieve data from the database.
 
-3. **Components**: The `Header.svelte`, `Footer.svelte`, `Navbar.svelte`, `Card.svelte`, and `Button.svelte` components will be shared across the `.svelte` route files. They will use the same exported variables and functions.
+3. Data Schemas:
+   - BlogPost schema: Used in `blog.svelte` and `BlogPost.svelte`.
+   - PortfolioItem schema: Used in `portfolio.svelte` and `PortfolioItem.svelte`.
 
-4. **Utils**: The `utils.js` file will be shared across the `.svelte` route files. It will contain utility functions that can be used in any of the route files.
+4. ID Names of DOM Elements:
+   - `navbar`: Used in `Header.svelte` and `Navbar.svelte`.
+   - `footer`: Used in `Footer.svelte`.
+   - `blog-post`: Used in `blog.svelte` and `BlogPost.svelte`.
+   - `portfolio-item`: Used in `portfolio.svelte` and `PortfolioItem.svelte`.
 
-5. **Styles**: The `index.css`, `tailwind.css`, and `global.css` files will be shared across the `.svelte` route files. They will contain global styles that can be used in any of the route files.
+5. Message Names:
+   - `NAVIGATION_EVENT`: Used in `Navbar.svelte` and all routes for navigation events.
 
-6. **Config Files**: The `svelte.config.js`, `tailwind.config.js`, `postcss.config.js`, and `package.json` files will be shared across the entire project. They will contain configuration settings and dependencies for the project.
+6. Function Names:
+   - `getBlogPosts`: Used in `blog.svelte` and `firestore.js`.
+   - `getPortfolioItems`: Used in `portfolio.svelte` and `firestore.js`.
 
-7. **DOM Element IDs**: The `.svelte` route files and components will share DOM element IDs. These IDs will be used to target specific elements in the JavaScript functions.
-
-8. **Message Names**: The `.svelte` route files and components will share message names. These names will be used for communication between components.
-
-9. **Function Names**: The `.svelte` route files, components, and `utils.js` file will share function names. These names will be used to call specific functions.
+7. CSS Classes:
+   - Tailwind CSS utility classes: Used in all `.svelte` and `.css` files for styling.
+   - Custom CSS classes defined in `index.css`: Used in all `.svelte` files for styling.

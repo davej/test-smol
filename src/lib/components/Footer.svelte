@@ -1,17 +1,20 @@
 ```svelte
 <script>
-  import { currentYear } from '$lib/utils.js';
+  import { onMount } from 'svelte';
+  let year = new Date().getFullYear();
+
+  onMount(() => {
+    // Any on-mount logic can go here
+  });
 </script>
 
-<footer class="bg-gray-800 text-white py-6 px-4">
-  <div class="container mx-auto flex justify-between items-center">
-    <div>
-      <p>&copy; {currentYear()} Your Name</p>
-    </div>
-    <div>
-      <a href="https://github.com/yourusername" class="text-white hover:text-gray-300 mx-2" target="_blank">Github</a>
-      <a href="https://linkedin.com/in/yourusername" class="text-white hover:text-gray-300 mx-2" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com/yourusername" class="text-white hover:text-gray-300 mx-2" target="_blank">Twitter</a>
+<footer id="footer" class="bg-gray-800 text-white py-6 px-4">
+  <div class="container mx-auto text-center">
+    <p class="mb-4">© {year} - All rights reserved.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+      <a href="#" class="hover:text-gray-300">Terms of Service</a>
+      <a href="#" class="hover:text-gray-300">Contact</a>
     </div>
   </div>
 </footer>

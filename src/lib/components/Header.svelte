@@ -1,19 +1,11 @@
 ```svelte
 <script>
-  import { onMount } from 'svelte';
   import Navbar from './Navbar.svelte';
-
-  let title = 'Your Name';
-
-  onMount(() => {
-    document.title = `${title} | Home`;
-  });
 </script>
 
-<header class="bg-gray-800 text-white py-6 px-4">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-3xl font-bold">{title}</h1>
-    <Navbar />
+<header class="bg-black text-white">
+  <div class="container mx-auto px-6 py-4">
+    <Navbar id="navbar" />
   </div>
 </header>
 ```

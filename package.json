@@ -1,0 +1,30 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A simple personal website built with SvelteKit and Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "start": "svelte-kit start"
+  },
+  "keywords": ["sveltekit", "tailwindcss", "personal", "website"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sveltejs/kit": "next",
+    "svelte": "^3.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vite": "^2.0.0"
+  },
+  "svelte": {
+    "compilerOptions": {
+      "hydratable": true
+    }
+  }
+}
